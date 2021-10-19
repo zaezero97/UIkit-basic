@@ -32,7 +32,6 @@ class OnBoardingItemViewController: UIViewController {
         mainTitleLabel.text = mainText
         descriptionLabel.text = subText
         topImageView.image = topImage
-        // Do any additional setup after loading the view.
     }
 
 }
