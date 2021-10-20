@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  PenGestureApp
+//  PanGestureApp
 //
 //  Created by 재영신 on 2021/10/20.
 //
