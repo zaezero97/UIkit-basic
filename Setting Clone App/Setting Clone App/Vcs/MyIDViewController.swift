@@ -16,7 +16,9 @@ class MyIDViewController: UIViewController {
             nextButton.isEnabled = false
         }
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
