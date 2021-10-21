@@ -14,6 +14,7 @@
 		AECA90042720EB7700E515D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AECA90032720EB7700E515D1 /* Assets.xcassets */; };
 		AECA90072720EB7700E515D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECA90052720EB7700E515D1 /* LaunchScreen.storyboard */; };
 		AECA900F2720ECFE00E515D1 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA900E2720ECFE00E515D1 /* MovieCell.swift */; };
+		AECA90112720F67000E515D1 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA90102720F67000E515D1 /* MovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AECA90062720EB7700E515D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AECA90082720EB7700E515D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AECA900E2720ECFE00E515D1 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		AECA90102720F67000E515D1 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				AECA90032720EB7700E515D1 /* Assets.xcassets */,
 				AECA90052720EB7700E515D1 /* LaunchScreen.storyboard */,
 				AECA90082720EB7700E515D1 /* Info.plist */,
+				AECA90102720F67000E515D1 /* MovieModel.swift */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				AECA8FFF2720EB7500E515D1 /* ViewController.swift in Sources */,
 				AECA8FFB2720EB7500E515D1 /* AppDelegate.swift in Sources */,
+				AECA90112720F67000E515D1 /* MovieModel.swift in Sources */,
 				AECA900F2720ECFE00E515D1 /* MovieCell.swift in Sources */,
 				AECA8FFD2720EB7500E515D1 /* SceneDelegate.swift in Sources */,
 			);
