@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var movieModel : MovieModel?
-    
+    var term  = ""
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var movieTableView: UITableView!
     override func viewDidLoad() {
@@ -82,12 +82,21 @@ extension ViewController : UITableViewDataSource{
 }
 // MARK: - TableView Delegate
 extension ViewController : UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let storyboard = UIStoryboard(name: "DetailViewController", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailVC.movieResult = self.movieModel?.results[indexPath.row]
+        present(detailVC, animated: true,completion: nil)
+    }
 }
 // MARK: - Search Bar Delegate
 extension ViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        guard let hasText = searchBar.text else { return }
+        term = hasText
+        requestMovieAPI()
+        self.view.endEditing(true)
     }
 }
 // MARK: - Movie api call function
@@ -97,7 +106,7 @@ extension ViewController{
         let session = URLSession(configuration: sessionConfig)
         
         var components = URLComponents(string: "https://itunes.apple.com/search")
-        let term = URLQueryItem(name: "term", value: "marvel")
+        let term = URLQueryItem(name: "term", value: term)
         let media = URLQueryItem(name: "media", value: "movie")
         
         components?.queryItems = [term,media]

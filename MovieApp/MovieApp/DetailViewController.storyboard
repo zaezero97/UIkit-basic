@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="Y6W-OH-hqX" customClass="DetailViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMh-Zf-q9q">
+                                <rect key="frame" x="0.0" y="64" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="9lV-Al-MAJ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xX-P3-VnF">
+                                <rect key="frame" x="268" y="284" width="51" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OzX-KR-2jw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9g-74-W8s">
+                                <rect key="frame" x="339" y="284" width="55" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="15b-QP-GDv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JX-jT-EZJ">
+                                <rect key="frame" x="20" y="335" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2J-4X-Npl">
+                                <rect key="frame" x="20" y="384.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AMh-Zf-q9q" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Boj-zt-m49"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="t2J-4X-Npl" secondAttribute="bottom" constant="20" id="KHe-Zk-gU1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8JX-jT-EZJ" secondAttribute="trailing" constant="20" id="MJK-6B-8qv"/>
+                            <constraint firstItem="8JX-jT-EZJ" firstAttribute="top" secondItem="2xX-P3-VnF" secondAttribute="bottom" constant="20" id="OZO-gk-dis"/>
+                            <constraint firstItem="AMh-Zf-q9q" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="Te8-4b-imU"/>
+                            <constraint firstItem="t2J-4X-Npl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Uac-hg-AWC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AMh-Zf-q9q" secondAttribute="trailing" id="c9t-ek-BZZ"/>
+                            <constraint firstItem="t2J-4X-Npl" firstAttribute="top" secondItem="8JX-jT-EZJ" secondAttribute="bottom" constant="29" id="hpY-QW-aPi"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="r9g-74-W8s" secondAttribute="trailing" constant="20" id="lEs-NU-2v9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="t2J-4X-Npl" secondAttribute="trailing" constant="20" id="leE-Oz-Xnd"/>
+                            <constraint firstItem="r9g-74-W8s" firstAttribute="leading" secondItem="2xX-P3-VnF" secondAttribute="trailing" constant="20" id="mGh-Xc-VVG"/>
+                            <constraint firstItem="r9g-74-W8s" firstAttribute="top" secondItem="AMh-Zf-q9q" secondAttribute="bottom" constant="20" id="n1c-zI-UtP"/>
+                            <constraint firstItem="2xX-P3-VnF" firstAttribute="top" secondItem="AMh-Zf-q9q" secondAttribute="bottom" constant="20" id="rt1-8K-w4X"/>
+                            <constraint firstItem="8JX-jT-EZJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="yid-Y4-gps"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="t2J-4X-Npl" id="g9j-Fy-dwV"/>
+                        <outlet property="movieContainer" destination="AMh-Zf-q9q" id="g0W-O0-uaE"/>
+                        <outlet property="titleLabel" destination="8JX-jT-EZJ" id="eLr-DS-Vsg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="51.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
