@@ -15,13 +15,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var movieTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         movieTableView.delegate = self
         movieTableView.dataSource = self
         searchBar.delegate = self
         
         requestMovieAPI()
+    }
+    func loadImage(urlString : String, completion: @escaping (UIImage?)-> Void){
+        let sessionConfig = URLSessionConfiguration.default
+        let session = URLSession(configuration: sessionConfig)
+        
+        if let hasURL = URL(string: urlString){
+            var request = URLRequest(url: hasURL)
+            request.httpMethod = "GET"
+            
+            session.dataTask(with: request) { data, response, error in
+                print((response as! HTTPURLResponse).statusCode)
+                if let hasData = data{
+                    completion(UIImage(data: hasData))
+                    return
+                }
+            }.resume()
+            session.finishTasksAndInvalidate()
+        }
+        completion(nil)
     }
 }
 
@@ -30,7 +48,9 @@ extension ViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.movieModel?.results.count ?? 0
     }
-    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
         
@@ -41,6 +61,21 @@ extension ViewController : UITableViewDataSource{
         let price = self.movieModel?.results[indexPath.row].trackPrice?.description ?? ""
         
         cell.priceLabel.text = currency + price
+        self.loadImage(urlString: self.movieModel?.results[indexPath.row].image ?? "", completion: { image in
+            DispatchQueue.main.async {
+                cell.movieImageView.image = image
+            }
+        })
+        if let dateString = self.movieModel?.results[indexPath.row].releaseDate{
+            let formatter = ISO8601DateFormatter()
+            if let isoDate = formatter.date(from: dateString){
+                let myFormmater = DateFormatter()
+                myFormmater.dateFormat = "yyyy-MM-dd"
+                let dateStr = myFormmater.string(from: isoDate)
+                cell.dateLabel.text = dateStr
+            }
+        }
+        
         return cell
     }
     
@@ -86,7 +121,6 @@ extension ViewController{
                     print(error)
                 }
             }
-            
             
         }
         task.resume()
