@@ -28,12 +28,19 @@ class ViewController: UIViewController {
 // MARK: - TableView DataSource
 extension ViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.movieModel?.results.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
         
+        cell.titleLabel.text = self.movieModel?.results[indexPath.row].trackName
+        cell.descriptionLabel.text = self.movieModel?.results[indexPath.row].shortDescription
+        
+        let currency = self.movieModel?.results[indexPath.row].currency ?? ""
+        let price = self.movieModel?.results[indexPath.row].trackPrice?.description ?? ""
+        
+        cell.priceLabel.text = currency + price
         return cell
     }
     
@@ -70,7 +77,11 @@ extension ViewController{
             if let hasData = data{
                 do{
                     self.movieModel = try JSONDecoder().decode(MovieModel.self, from: hasData)
-                    print(self.movieModel)
+                    print(self.movieModel ?? "no data")
+                    
+                    DispatchQueue.main.async {
+                        self.movieTableView.reloadData()
+                    }
                 }catch{
                     print(error)
                 }
