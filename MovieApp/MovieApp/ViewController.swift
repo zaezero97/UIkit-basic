@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     var movieModel : MovieModel?
     var term  = ""
+    var networkLayer = NetworkLayer()
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var movieTableView: UITableView!
     override func viewDidLoad() {
@@ -23,24 +24,33 @@ class ViewController: UIViewController {
         requestMovieAPI()
     }
     func loadImage(urlString : String, completion: @escaping (UIImage?)-> Void){
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfig)
-        
-        if let hasURL = URL(string: urlString){
-            var request = URLRequest(url: hasURL)
-            request.httpMethod = "GET"
-            
-            session.dataTask(with: request) { data, response, error in
-                print((response as! HTTPURLResponse).statusCode)
-                if let hasData = data{
-                    completion(UIImage(data: hasData))
-                    return
-                }
-            }.resume()
-            session.finishTasksAndInvalidate()
+        networkLayer.request(type: .justURL(urlString: urlString)) { data, response, error in
+            if let hasData = data{
+                completion(UIImage(data: hasData))
+                return
+            }
+            completion(nil)
         }
-        completion(nil)
     }
+    //    func loadImage(urlString : String, completion: @escaping (UIImage?)-> Void){
+    //        let sessionConfig = URLSessionConfiguration.default
+    //        let session = URLSession(configuration: sessionConfig)
+    //
+    //        if let hasURL = URL(string: urlString){
+    //            var request = URLRequest(url: hasURL)
+    //            request.httpMethod = "GET"
+    //
+    //            session.dataTask(with: request) { data, response, error in
+    //                print((response as! HTTPURLResponse).statusCode)
+    //                if let hasData = data{
+    //                    completion(UIImage(data: hasData))
+    //                    return
+    //                }
+    //            }.resume()
+    //            session.finishTasksAndInvalidate()
+    //        }
+    //        completion(nil)
+    //    }
 }
 
 // MARK: - TableView DataSource
@@ -102,22 +112,12 @@ extension ViewController: UISearchBarDelegate{
 // MARK: - Movie api call function
 extension ViewController{
     func requestMovieAPI(){
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfig)
-        
-        var components = URLComponents(string: "https://itunes.apple.com/search")
         let term = URLQueryItem(name: "term", value: term)
         let media = URLQueryItem(name: "media", value: "movie")
         
-        components?.queryItems = [term,media]
+        let queryItems = [term,media]
         
-        guard let url = components?.url else { return }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        let task = session.dataTask(with: request) { data, response, error in
-            print((response as! HTTPURLResponse).statusCode)
+        networkLayer.request(type: .searchMovie(queryItems: queryItems)) { data, response, error in
             if let hasData = data{
                 do{
                     self.movieModel = try JSONDecoder().decode(MovieModel.self, from: hasData)
@@ -130,9 +130,40 @@ extension ViewController{
                     print(error)
                 }
             }
-            
         }
-        task.resume()
-        session.finishTasksAndInvalidate()
     }
+    //    func requestMovieAPI2(){
+    //        let sessionConfig = URLSessionConfiguration.default
+    //        let session = URLSession(configuration: sessionConfig)
+    //
+    //        var components = URLComponents(string: "https://itunes.apple.com/search")
+    //        let term = URLQueryItem(name: "term", value: term)
+    //        let media = URLQueryItem(name: "media", value: "movie")
+    //
+    //        components?.queryItems = [term,media]
+    //
+    //        guard let url = components?.url else { return }
+    //
+    //        var request = URLRequest(url: url)
+    //        request.httpMethod = "GET"
+    //
+    //        let task = session.dataTask(with: request) { data, response, error in
+    //            print((response as! HTTPURLResponse).statusCode)
+    //            if let hasData = data{
+    //                do{
+    //                    self.movieModel = try JSONDecoder().decode(MovieModel.self, from: hasData)
+    //                    print(self.movieModel ?? "no data")
+    //
+    //                    DispatchQueue.main.async {
+    //                        self.movieTableView.reloadData()
+    //                    }
+    //                }catch{
+    //                    print(error)
+    //                }
+    //            }
+    //
+    //        }
+    //        task.resume()
+    //        session.finishTasksAndInvalidate()
+    //    }
 }
