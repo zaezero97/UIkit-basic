@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     var movieModel : MovieModel?
     var term  = ""
     var networkLayer = NetworkLayer()
