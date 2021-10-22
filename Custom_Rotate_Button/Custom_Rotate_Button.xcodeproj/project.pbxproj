@@ -13,6 +13,7 @@
 		AE90D28F27229871001BF5BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE90D28D27229871001BF5BA /* Main.storyboard */; };
 		AE90D29127229872001BF5BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE90D29027229872001BF5BA /* Assets.xcassets */; };
 		AE90D29427229872001BF5BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE90D29227229872001BF5BA /* LaunchScreen.storyboard */; };
+		AE90D29C272298C5001BF5BA /* RotateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90D29B272298C5001BF5BA /* RotateButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AE90D29027229872001BF5BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE90D29327229872001BF5BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE90D29527229872001BF5BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE90D29B272298C5001BF5BA /* RotateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				AE90D28727229871001BF5BA /* AppDelegate.swift */,
 				AE90D28927229871001BF5BA /* SceneDelegate.swift */,
 				AE90D28B27229871001BF5BA /* ViewController.swift */,
+				AE90D29B272298C5001BF5BA /* RotateButton.swift */,
 				AE90D28D27229871001BF5BA /* Main.storyboard */,
 				AE90D29027229872001BF5BA /* Assets.xcassets */,
 				AE90D29227229872001BF5BA /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE90D29C272298C5001BF5BA /* RotateButton.swift in Sources */,
 				AE90D28C27229871001BF5BA /* ViewController.swift in Sources */,
 				AE90D28827229871001BF5BA /* AppDelegate.swift in Sources */,
 				AE90D28A27229871001BF5BA /* SceneDelegate.swift in Sources */,
