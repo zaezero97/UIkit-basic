@@ -10,9 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TodoDetailViewController" customModule="TodoApp" customModuleProvider="target">
             <connections>
+                <outlet property="deleteButton" destination="zTK-g4-BPb" id="lUj-fW-09I"/>
                 <outlet property="highButton" destination="Ay5-u9-KwT" id="FxN-nx-53n"/>
                 <outlet property="lowButton" destination="lZG-BT-Gyn" id="UVR-8U-3Jt"/>
                 <outlet property="normalButton" destination="PFn-F9-7C8" id="h12-LH-WFK"/>
+                <outlet property="saveButton" destination="LR0-7U-njQ" id="6Rf-kR-zeA"/>
                 <outlet property="titleTextField" destination="Bcx-JN-MfJ" id="CKq-dK-SFR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHM-W5-ZAo">
-                    <rect key="frame" x="20" y="84" width="374" height="120.5"/>
+                    <rect key="frame" x="20" y="84" width="374" height="130.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STK-Gc-LpR">
                             <rect key="frame" x="20" y="20" width="334" height="20.5"/>
@@ -32,9 +34,9 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bcx-JN-MfJ">
-                            <rect key="frame" x="20" y="60.5" width="334" height="40"/>
+                            <rect key="frame" x="20" y="60.5" width="334" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="K9o-vF-RVn"/>
+                                <constraint firstAttribute="height" constant="50" id="K9o-vF-RVn"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -52,7 +54,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGf-Jy-XBf">
-                    <rect key="frame" x="20" y="224.5" width="374" height="111.5"/>
+                    <rect key="frame" x="20" y="234.5" width="374" height="111.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LiS-jZ-tUK">
                             <rect key="frame" x="20" y="20" width="334" height="20.5"/>
@@ -60,7 +62,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="WGj-oI-RaQ">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="WGj-oI-RaQ">
                             <rect key="frame" x="20" y="60.5" width="334" height="31"/>
                             <subviews>
                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZG-BT-Gyn">
@@ -103,7 +105,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LR0-7U-njQ">
-                    <rect key="frame" x="20" y="356" width="374" height="50"/>
+                    <rect key="frame" x="20" y="366" width="374" height="50"/>
                     <color key="backgroundColor" red="0.5173915988767801" green="1" blue="0.27588279678513206" alpha="0.20434736394557823" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="NSP-h0-ySE"/>
@@ -115,13 +117,16 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTK-g4-BPb">
-                    <rect key="frame" x="20" y="426" width="374" height="50"/>
+                    <rect key="frame" x="20" y="436" width="374" height="50"/>
                     <color key="backgroundColor" red="0.77246489594227652" green="0.92216384430527221" blue="1" alpha="0.20434736394557823" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="bMD-l0-ahk"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Delete"/>
+                    <connections>
+                        <action selector="deleteTodo:" destination="-1" eventType="touchUpInside" id="oiA-90-a3o"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
