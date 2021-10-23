@@ -19,7 +19,7 @@ class ViewController: UIViewController {
             if upDownType == .up{
                 print("여기서 해야할 일")
             }
-        
+        }
         // Do any additional setup after loading the view.
 //
 //        let myButton = RotateButton()
@@ -40,4 +40,5 @@ class ViewController: UIViewController {
 //
     }
 }
+
 
