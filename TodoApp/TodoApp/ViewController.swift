@@ -52,7 +52,7 @@ extension ViewController {
         let barAppearance = UINavigationBarAppearance()
         barAppearance.backgroundColor = .blue
         self.navigationController?.navigationBar.standardAppearance = barAppearance
-        
+        self.navigationController?.navigationBar.scrollEdgeAppearance = barAppearance
         
     }
     @objc func addNewTodo(){
