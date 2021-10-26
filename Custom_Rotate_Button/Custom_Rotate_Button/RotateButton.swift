@@ -13,11 +13,11 @@ enum RotateType {
 class RotateButton: UIButton {
     
     var isUp = RotateType.down{
-        didSet{
-            changeDesign()
-        }
-    }
-    
+           didSet{
+               changeDesign()
+           }
+       }
+       
     var selectedCallback : ((RotateType)->Void)?
     init() {
         super.init(frame: CGRect.zero)

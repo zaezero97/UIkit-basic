@@ -14,11 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         customButton.selectedCallback = {
-            upDownType in
-            print(upDownType)
-            if upDownType == .up{
-                print("여기서 해야할 일")
-            }
+                 upDownType in
+                 print(upDownType)
+                 if upDownType == .up{
+                     print("여기서 해야할 일")
+                 }
         }
         // Do any additional setup after loading the view.
 //
