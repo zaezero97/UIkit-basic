@@ -13,6 +13,8 @@
 		AEF763832727852300FA32FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF763812727852300FA32FD /* Main.storyboard */; };
 		AEF763852727852500FA32FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF763842727852500FA32FD /* Assets.xcassets */; };
 		AEF763882727852500FA32FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF763862727852500FA32FD /* LaunchScreen.storyboard */; };
+		AEF7639027278A7800FA32FD /* bg105.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEF7638F27278A7800FA32FD /* bg105.jpg */; };
+		AEF7639227278CDC00FA32FD /* bg103.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEF7639127278CDC00FA32FD /* bg103.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AEF763842727852500FA32FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEF763872727852500FA32FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEF763892727852500FA32FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEF7638F27278A7800FA32FD /* bg105.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg105.jpg; path = "../../../../../Downloads/Lecture Images/bg105.jpg"; sourceTree = "<group>"; };
+		AEF7639127278CDC00FA32FD /* bg103.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg103.jpg; path = "../../../../../Downloads/Lecture Images/bg103.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				AEF7637B2727852300FA32FD /* AppDelegate.swift */,
 				AEF7637D2727852300FA32FD /* SceneDelegate.swift */,
+				AEF7638F27278A7800FA32FD /* bg105.jpg */,
+				AEF7639127278CDC00FA32FD /* bg103.jpg */,
 				AEF7637F2727852300FA32FD /* ViewController.swift */,
 				AEF763812727852300FA32FD /* Main.storyboard */,
 				AEF763842727852500FA32FD /* Assets.xcassets */,
@@ -127,7 +133,9 @@
 			files = (
 				AEF763882727852500FA32FD /* LaunchScreen.storyboard in Resources */,
 				AEF763852727852500FA32FD /* Assets.xcassets in Resources */,
+				AEF7639227278CDC00FA32FD /* bg103.jpg in Resources */,
 				AEF763832727852300FA32FD /* Main.storyboard in Resources */,
+				AEF7639027278A7800FA32FD /* bg105.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

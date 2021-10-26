@@ -11,6 +11,33 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setNavigationTitleImmage()
+        makeBackButton()
+    }
+    func makeBackButton(){
+        guard let backImage = UIImage(named: "bg103.jpg")?.withRenderingMode(.alwaysOriginal )
+        else { return }
+        //backImage = backImage?.withRenderingMode(.alwaysOriginal )
+        let newImage = resizeImage(image: backImage, newWidth: 40, newHeight: 40)
+        self.navigationController?.navigationBar.backIndicatorImage = newImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = newImage
+        self.navigationController?.navigationBar.tintColor = UIColor.orange
+        
+        self.navigationItem.backButtonTitle = ""
+    }
+    
+    func resizeImage(image: UIImage,newWidth :CGFloat,newHeight: CGFloat)-> UIImage?{
+        let newImageRect = CGRect(x: 0, y: 0, width: newWidth, height: newHeight)
+        
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        image.draw(in:newImageRect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()?.withRenderingMode(.alwaysOriginal)
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+    func setNavigationTitleImmage(){
         //self.navigationItem.title = "메인 화면"
         
 //        let logo = UIImageView(image: UIImage(named: "bg103.jpg"))
@@ -30,7 +57,6 @@ class ViewController: UIViewController {
         btn.addTarget(self, action: #selector(testAction), for: .touchUpInside)
         self.navigationItem.titleView = btn
     }
-    
     @objc func testAction(){
         print("test action")
     }
