@@ -13,7 +13,7 @@
                 <outlet property="cancelButton" destination="nV4-4j-Aed" id="tVV-bI-iQV"/>
                 <outlet property="emailTextField" destination="jAn-tT-cUe" id="uxu-Jb-HWF"/>
                 <outlet property="nextButton" destination="bR5-MD-au6" id="QZC-F7-LSp"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="g0A-du-Eml"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

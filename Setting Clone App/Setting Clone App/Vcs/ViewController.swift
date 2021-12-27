@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var settingTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         settingTableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier:"ProfileCell")
         settingTableView.register(UINib(nibName: "MenuCell", bundle: nil), forCellReuseIdentifier:"MenuCell") // 컴파일(빌드?)시 xib파일이 nib파일로 변경되기 때문에 xib파일 이름을 적어도 되는거 같다.
         settingTableView.dataSource = self
@@ -24,7 +23,10 @@ class ViewController: UIViewController {
         
         makeData()
     }
-    
+    override func loadView() {
+        super.loadView()
+        print("load")
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = true
