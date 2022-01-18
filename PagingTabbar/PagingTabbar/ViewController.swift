@@ -60,12 +60,13 @@ class ViewController: UIViewController {
             make.width.equalTo(self.view.frame.width / 3)
             make.bottom.equalTo(tabCollectionView).offset(-10)
             make.height.equalTo(10)
-            make.leading.equalTo(0)
+            make.leading.equalTo(self.view)
         }
         
         let firstIndexPath = IndexPath(item: 0, section: 0)
-        tabCollectionView.selectItem(at: firstIndexPath, animated: false, scrollPosition: .right)
-
+        tabCollectionView.selectItem(at: firstIndexPath, animated: false, scrollPosition: [])
+        tabPageCollectionView.selectItem(at: firstIndexPath, animated: false, scrollPosition: [])
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -109,6 +110,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
         }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("didSelectItemAt",indexPath)
         
         if collectionView == tabCollectionView {
             tabPageCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
@@ -116,6 +118,8 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("scroll")
+        
         let value = scrollView.contentOffset.x / 3
         indicatorView.snp.updateConstraints { make in
             make.leading.equalTo(value)
@@ -129,7 +133,6 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
         let itemAt = Int(targetContentOffset.pointee.x / self.view.frame.width)
         let indexPath = IndexPath(item: itemAt, section: 0)
         tabCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
-        collectionView(tabCollectionView, didSelectItemAt: indexPath)
     }
     
 }
