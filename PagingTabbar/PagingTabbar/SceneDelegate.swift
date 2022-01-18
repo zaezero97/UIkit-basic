@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene) // SceneDelegate의 프로퍼티에 설정해줌
         let mainViewController = ViewController() // 맨 처음 보여줄 ViewController
 
-        window?.rootViewController = mainViewController
+        window?.rootViewController = UINavigationController(rootViewController: mainViewController)
         window?.makeKeyAndVisible()
 
     }

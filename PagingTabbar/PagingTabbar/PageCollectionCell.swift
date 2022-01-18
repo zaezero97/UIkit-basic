@@ -12,7 +12,7 @@ class PageCollectionCell: UICollectionViewCell {
     static let identifier = "PageCollectionCell"
     lazy var titleLabel: UILabel = {
        let label = UILabel()
-        label.font = .systemFont(ofSize: 52,weight: .bold)
+        label.font = .systemFont(ofSize: 24,weight: .bold)
         label.textAlignment = .center
         return label
     }()
@@ -28,9 +28,15 @@ class PageCollectionCell: UICollectionViewCell {
         titleLabel.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        print("init frame call !!!")
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        print("init coder call!!!")
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        print("awakeFromNib call!!")
     }
 }

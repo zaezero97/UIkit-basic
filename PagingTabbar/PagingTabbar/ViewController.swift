@@ -31,7 +31,6 @@ class ViewController: UIViewController {
     lazy var indicatorView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 10))
         view.backgroundColor = .black
-        
         return view
     }()
     
@@ -41,13 +40,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.backgroundColor = .white
-        
+        self.navigationItem.title = "abc"
         self.view.addSubview(tabCollectionView)
         self.view.addSubview(tabPageCollectionView)
         self.view.addSubview(indicatorView)
         
         tabCollectionView.snp.makeConstraints { make in
-            make.leading.top.trailing.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.top.equalTo(self.view.safeAreaLayoutGuide)
             make.height.equalTo(100)
         }
         
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
             make.leading.equalTo(0)
         }
         
-        let firstIndexPath = IndexPath(item: 0, section: 0) // delegate 호출
+        let firstIndexPath = IndexPath(item: 0, section: 0)
         tabCollectionView.selectItem(at: firstIndexPath, animated: false, scrollPosition: .right)
 
     }
@@ -122,13 +122,16 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
         }
         
     }
-   
+    
+    
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
     {
         let itemAt = Int(targetContentOffset.pointee.x / self.view.frame.width)
         let indexPath = IndexPath(item: itemAt, section: 0)
-        tabCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+        tabCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
         collectionView(tabCollectionView, didSelectItemAt: indexPath)
     }
     
 }
+
+
