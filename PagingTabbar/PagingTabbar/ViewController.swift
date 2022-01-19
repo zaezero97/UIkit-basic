@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout.init())
         collectionView.delegate = self
         collectionView.dataSource = self
+        
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isPagingEnabled = true
         collectionView.register(PageCollectionCell.self, forCellWithReuseIdentifier: PageCollectionCell.identifier)
