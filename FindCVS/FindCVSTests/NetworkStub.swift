@@ -11,6 +11,8 @@ import Stubber
 
 @testable import FindCVS
 
-class LocalNetworkStub: LocalNetwork {
-    
+class stub: LocalNetwork {
+    override func getLocation(by mapPoint: MTMapPoint) -> Single<Result<LocationData, URLError>> {
+        Stubber.invoke(getLocation, args: mapPoint)
+    }
 }

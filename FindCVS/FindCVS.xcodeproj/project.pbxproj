@@ -19,7 +19,9 @@
 		AE8CB841279A3E2C00B1B89F /* DetailListBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8CB840279A3E2C00B1B89F /* DetailListBackgroundViewModel.swift */; };
 		AE8CB843279A416D00B1B89F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8CB842279A416D00B1B89F /* libc++.tbd */; };
 		AE8CB861279A42E300B1B89F /* NetworkStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8CB860279A42E300B1B89F /* NetworkStub.swift */; };
-		AE8CB863279A438E00B1B89F /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8CB862279A438E00B1B89F /* ViewModelTests.swift */; };
+		AE8CB868279A4B0700B1B89F /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8CB867279A4B0700B1B89F /* Dummy.swift */; };
+		AE8CB86A279A4B5100B1B89F /* LocationInformationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8CB869279A4B5100B1B89F /* LocationInformationModelTests.swift */; };
+		AE8CB86B279A4D2800B1B89F /* networkDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = AE8CB866279A4ACF00B1B89F /* networkDummy.json */; };
 		AEA37CAA279A2F4D00AEAD7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA37CA9279A2F4D00AEAD7A /* AppDelegate.swift */; };
 		AEA37CAC279A2F4D00AEAD7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA37CAB279A2F4D00AEAD7A /* SceneDelegate.swift */; };
 		AEA37CB3279A2F4E00AEAD7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA37CB2279A2F4E00AEAD7A /* Assets.xcassets */; };
@@ -337,7 +339,9 @@
 		AE8CB842279A416D00B1B89F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		AE8CB857279A42B300B1B89F /* FindCVSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindCVSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8CB860279A42E300B1B89F /* NetworkStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStub.swift; sourceTree = "<group>"; };
-		AE8CB862279A438E00B1B89F /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
+		AE8CB866279A4ACF00B1B89F /* networkDummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = networkDummy.json; sourceTree = "<group>"; };
+		AE8CB867279A4B0700B1B89F /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		AE8CB869279A4B5100B1B89F /* LocationInformationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModelTests.swift; sourceTree = "<group>"; };
 		AEA37CA6279A2F4D00AEAD7A /* FindCVS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindCVS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA37CA9279A2F4D00AEAD7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEA37CAB279A2F4D00AEAD7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -693,7 +697,9 @@
 			isa = PBXGroup;
 			children = (
 				AE8CB860279A42E300B1B89F /* NetworkStub.swift */,
-				AE8CB862279A438E00B1B89F /* ViewModelTests.swift */,
+				AE8CB866279A4ACF00B1B89F /* networkDummy.json */,
+				AE8CB867279A4B0700B1B89F /* Dummy.swift */,
+				AE8CB869279A4B5100B1B89F /* LocationInformationModelTests.swift */,
 			);
 			path = FindCVSTests;
 			sourceTree = "<group>";
@@ -1213,6 +1219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8CB86B279A4D2800B1B89F /* networkDummy.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1585,8 +1592,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE8CB863279A438E00B1B89F /* ViewModelTests.swift in Sources */,
+				AE8CB868279A4B0700B1B89F /* Dummy.swift in Sources */,
 				AE8CB861279A42E300B1B89F /* NetworkStub.swift in Sources */,
+				AE8CB86A279A4B5100B1B89F /* LocationInformationModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1690,6 +1698,7 @@
 		AEA37CB8279A2F4E00AEAD7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1724,6 +1733,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1744,7 +1754,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jaeyoung/Documents/GitHub/UIkit-basic/FindCVS/FindCVS/BridgingHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1752,6 +1762,7 @@
 		AEA37CB9279A2F4E00AEAD7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1786,6 +1797,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1799,7 +1811,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jaeyoung/Documents/GitHub/UIkit-basic/FindCVS/FindCVS/BridgingHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1833,7 +1845,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.test.FindCVS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jaeyoung/Documents/GitHub/UIkit-basic/FindCVS/FindCVS/BridgingHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/FindCVS/BridgingHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1867,7 +1879,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.test.FindCVS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jaeyoung/Documents/GitHub/UIkit-basic/FindCVS/FindCVS/BridgingHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/FindCVS/BridgingHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

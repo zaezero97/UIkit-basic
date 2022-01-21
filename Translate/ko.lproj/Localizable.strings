@@ -1,0 +1,23 @@
+/* 
+  Localization.strings
+  Translate
+
+  Created by 재영신 on 2022/01/21.
+  
+*/
+//TabBar Title
+"Translate" = "번역";
+"Bookmarks" = "즐겨찾기"; // Navigation title
+
+
+// Language model
+"Korean" = "한국어";
+"English" = "영어";
+"Japanese" = "일본어";
+"Chinese" = "중국어";
+
+// Action Sheet
+"Cancle" = "취소";
+
+// Placeholder
+"Enter_text" = "텍스트 입력";

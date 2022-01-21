@@ -1,0 +1,23 @@
+/* 
+  Localization.strings
+  Translate
+
+  Created by 재영신 on 2022/01/21.
+  
+*/
+//TabBar Title
+"Translate" = "Translate";
+"Bookmarks" = "Bookmarks"; // Navigation title
+
+
+// Language model
+"Korean" = "Korean";
+"English" = "English";
+"Japanese" = "Japanese";
+"Chinese" = "Chinese";
+
+// Action Sheet
+"Cancle" = "Cancle";
+
+// Placeholder
+"Enter_text" = "Enter_text";
