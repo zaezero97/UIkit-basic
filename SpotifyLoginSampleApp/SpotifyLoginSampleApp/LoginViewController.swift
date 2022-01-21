@@ -15,7 +15,7 @@ import AuthenticationServices
 import CryptoKit
 
 class LoginViewController: UIViewController {
-
+    let userNotiCenter = UNUserNotificationCenter.current()
   
     private var currentNonce: String?
     lazy var imageView: UIImageView = {
@@ -93,8 +93,9 @@ class LoginViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.configureUI()
+
+        self.requestSendNoti(seconds: 2.0)
     }
     
     private func configureUI() {
@@ -136,6 +137,29 @@ class LoginViewController: UIViewController {
             make.top.equalTo(titleStackView.snp.bottom).offset(60)
         }
     }
+   
+    // 알림 전송
+    func requestSendNoti(seconds: Double) {
+        let notiContent = UNMutableNotificationContent()
+        notiContent.title = "알림 title"
+        notiContent.body = "알림 body"
+        notiContent.userInfo = ["targetScene": "splash"] // 푸시 받을때 오는 데이터
+
+        // 알림이 trigger되는 시간 설정
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
+
+        let request = UNNotificationRequest(
+            identifier: UUID().uuidString,
+            content: notiContent,
+            trigger: trigger
+        )
+
+        userNotiCenter.add(request) { (error) in
+            print(#function, error)
+        }
+
+    }
+
 }
 
 struct ViewController_Priviews: PreviewProvider {
@@ -160,6 +184,7 @@ extension LoginViewController {
     @objc func didTapEmailLoginButton() {
         print("tapped")
         self.navigationController?.pushViewController(EnterEmailViewController(), animated: true)
+    
     }
     @objc func didTapGoogleLoginButton() {
        

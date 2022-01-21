@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE706ECF27995AD700387185 /* abcd.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE706ECE27995AD700387185 /* abcd.swift */; };
 		AE9A432B2797C256003B5DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9A432A2797C256003B5DD4 /* AppDelegate.swift */; };
 		AE9A432D2797C256003B5DD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9A432C2797C256003B5DD4 /* SceneDelegate.swift */; };
 		AE9A43342797C258003B5DD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9A43332797C258003B5DD4 /* Assets.xcassets */; };
@@ -18,9 +19,22 @@
 		AE9A43482797DEF3003B5DD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE9A43472797DEF3003B5DD4 /* GoogleService-Info.plist */; };
 		AE9A434B2797E0E5003B5DD4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AE9A434A2797E0E5003B5DD4 /* FirebaseAuth */; };
 		AE9A434E2797E890003B5DD4 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = AE9A434D2797E890003B5DD4 /* GoogleSignIn */; };
+		AEA7E79527984DE900943A67 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = AEA7E79427984DE900943A67 /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AE706EC927995AC900387185 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE9A431F2797C256003B5DD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE9A43262797C256003B5DD4;
+			remoteInfo = SpotifyLoginSampleApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		AE706EC527995AC900387185 /* SpotifyLoginSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotifyLoginSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE706ECE27995AD700387185 /* abcd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = abcd.swift; sourceTree = "<group>"; };
 		AE9A43272797C256003B5DD4 /* SpotifyLoginSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyLoginSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9A432A2797C256003B5DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9A432C2797C256003B5DD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,10 +49,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AE706EC227995AC900387185 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE9A43242797C256003B5DD4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA7E79527984DE900943A67 /* FirebaseMessaging in Frameworks */,
 				AE9A43422797C3C2003B5DD4 /* SnapKit in Frameworks */,
 				AE9A434B2797E0E5003B5DD4 /* FirebaseAuth in Frameworks */,
 				AE9A434E2797E890003B5DD4 /* GoogleSignIn in Frameworks */,
@@ -48,11 +70,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE706EC627995AC900387185 /* SpotifyLoginSampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE706ECE27995AD700387185 /* abcd.swift */,
+			);
+			path = SpotifyLoginSampleAppTests;
+			sourceTree = "<group>";
+		};
 		AE9A431E2797C256003B5DD4 = {
 			isa = PBXGroup;
 			children = (
 				AE9A43292797C256003B5DD4 /* SpotifyLoginSampleApp */,
+				AE706EC627995AC900387185 /* SpotifyLoginSampleAppTests */,
 				AE9A43282797C256003B5DD4 /* Products */,
+				AEA7E79327984DE900943A67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				AE9A43272797C256003B5DD4 /* SpotifyLoginSampleApp.app */,
+				AE706EC527995AC900387185 /* SpotifyLoginSampleAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,9 +114,34 @@
 			path = SpotifyLoginSampleApp;
 			sourceTree = "<group>";
 		};
+		AEA7E79327984DE900943A67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AE706EC427995AC900387185 /* SpotifyLoginSampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE706ECD27995AC900387185 /* Build configuration list for PBXNativeTarget "SpotifyLoginSampleAppTests" */;
+			buildPhases = (
+				AE706EC127995AC900387185 /* Sources */,
+				AE706EC227995AC900387185 /* Frameworks */,
+				AE706EC327995AC900387185 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE706ECA27995AC900387185 /* PBXTargetDependency */,
+			);
+			name = SpotifyLoginSampleAppTests;
+			productName = SpotifyLoginSampleAppTests;
+			productReference = AE706EC527995AC900387185 /* SpotifyLoginSampleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AE9A43262797C256003B5DD4 /* SpotifyLoginSampleApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE9A433B2797C258003B5DD4 /* Build configuration list for PBXNativeTarget "SpotifyLoginSampleApp" */;
@@ -101,6 +159,7 @@
 				AE9A43412797C3C2003B5DD4 /* SnapKit */,
 				AE9A434A2797E0E5003B5DD4 /* FirebaseAuth */,
 				AE9A434D2797E890003B5DD4 /* GoogleSignIn */,
+				AEA7E79427984DE900943A67 /* FirebaseMessaging */,
 			);
 			productName = SpotifyLoginSampleApp;
 			productReference = AE9A43272797C256003B5DD4 /* SpotifyLoginSampleApp.app */;
@@ -116,6 +175,11 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					AE706EC427995AC900387185 = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
+						TestTargetID = AE9A43262797C256003B5DD4;
+					};
 					AE9A43262797C256003B5DD4 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -140,11 +204,19 @@
 			projectRoot = "";
 			targets = (
 				AE9A43262797C256003B5DD4 /* SpotifyLoginSampleApp */,
+				AE706EC427995AC900387185 /* SpotifyLoginSampleAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AE706EC327995AC900387185 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE9A43252797C256003B5DD4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,6 +230,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AE706EC127995AC900387185 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE706ECF27995AD700387185 /* abcd.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE9A43232797C256003B5DD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -172,6 +252,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AE706ECA27995AC900387185 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE9A43262797C256003B5DD4 /* SpotifyLoginSampleApp */;
+			targetProxy = AE706EC927995AC900387185 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		AE9A43352797C258003B5DD4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -184,6 +272,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AE706ECB27995AC900387185 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HWBJNMY98D;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.test.SpotifyLoginSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpotifyLoginSampleApp.app/SpotifyLoginSampleApp";
+			};
+			name = Debug;
+		};
+		AE706ECC27995AC900387185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HWBJNMY98D;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.test.SpotifyLoginSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpotifyLoginSampleApp.app/SpotifyLoginSampleApp";
+			};
+			name = Release;
+		};
 		AE9A43392797C258003B5DD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -359,6 +496,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AE706ECD27995AC900387185 /* Build configuration list for PBXNativeTarget "SpotifyLoginSampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE706ECB27995AC900387185 /* Debug */,
+				AE706ECC27995AC900387185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AE9A43222797C256003B5DD4 /* Build configuration list for PBXProject "SpotifyLoginSampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -421,6 +567,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AE9A434C2797E890003B5DD4 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		AEA7E79427984DE900943A67 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE9A43492797E0E5003B5DD4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
