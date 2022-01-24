@@ -28,7 +28,7 @@ enum TabBarItem: CaseIterable {
     var viewController: UIViewController {
         switch self {
         case .feed:
-            return FeedViewController()
+            return UINavigationController(rootViewController: FeedViewController())
         case .profile:
             return UIViewController()
         }

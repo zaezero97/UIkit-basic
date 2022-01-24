@@ -19,6 +19,7 @@
 		AEE91828279E8B0E00D8A44D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE91827279E8B0E00D8A44D /* FeedViewController.swift */; };
 		AEE9182A279E8B1900D8A44D /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE91829279E8B1900D8A44D /* FeedPresenter.swift */; };
 		AEE9182D279E8DDA00D8A44D /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE9182C279E8DDA00D8A44D /* TabBarItem.swift */; };
+		AEE91830279E90F500D8A44D /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE9182F279E90F500D8A44D /* FeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		AEE91827279E8B0E00D8A44D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		AEE91829279E8B1900D8A44D /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		AEE9182C279E8DDA00D8A44D /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		AEE9182F279E90F500D8A44D /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				AEE91827279E8B0E00D8A44D /* FeedViewController.swift */,
 				AEE91829279E8B1900D8A44D /* FeedPresenter.swift */,
+				AEE9182F279E90F500D8A44D /* FeedTableViewCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				AEE91826279E8AE800D8A44D /* TabBarViewController.swift in Sources */,
 				AEE91822279E887200D8A44D /* UserDefaultsManager.swift in Sources */,
 				AEE91828279E8B0E00D8A44D /* FeedViewController.swift in Sources */,
+				AEE91830279E90F500D8A44D /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
