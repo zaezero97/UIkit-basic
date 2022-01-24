@@ -78,9 +78,11 @@ final class TwithViewController: UIViewController {
         stackView.spacing = 4.0
         return stackView
     }()
+    
     init(twith: Twith) {
         super.init(nibName: nil, bundle: nil)
         self.presenter = TwithPresenter(vc: self, twith: twith)
+        view.backgroundColor = .systemBackground
     }
     
     required init?(coder: NSCoder) {

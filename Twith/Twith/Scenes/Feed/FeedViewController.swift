@@ -26,8 +26,6 @@ final class FeedViewController: UIViewController {
         let tableView = UITableView()
         tableView.delegate = presenter
         tableView.dataSource = presenter
-        tableView.separatorStyle = .singleLine
-        tableView.separatorColor = .black
         tableView.register(
             FeedTableViewCell.self,
             forCellReuseIdentifier: FeedTableViewCell.identifier
@@ -72,7 +70,6 @@ extension FeedViewController: FeedProtocol {
     }
     
     func reloadData() {
-        print("reloadData!!!")
         self.tableView.reloadData()
     }
 }

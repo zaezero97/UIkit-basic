@@ -27,7 +27,6 @@ final class FeedPresenter: NSObject {
     }
     
     func viewDidLoad() {
-        self.twiths = manager.getTwith()
         self.vc?.setupView()
     }
     
