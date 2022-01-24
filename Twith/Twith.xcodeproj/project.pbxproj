@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D05B3A774492A6D8F760816 /* Pods_Twith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 982A5AD2872B1D9B1A31137C /* Pods_Twith.framework */; };
 		AEE91806279E86F900D8A44D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE91805279E86F900D8A44D /* AppDelegate.swift */; };
 		AEE91808279E86F900D8A44D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE91807279E86F900D8A44D /* SceneDelegate.swift */; };
 		AEE9180F279E86FA00D8A44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE9180E279E86FA00D8A44D /* Assets.xcassets */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E9B0CEEED3CF5894F8E9849 /* Pods-Twith.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twith.debug.xcconfig"; path = "Target Support Files/Pods-Twith/Pods-Twith.debug.xcconfig"; sourceTree = "<group>"; };
+		982A5AD2872B1D9B1A31137C /* Pods_Twith.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twith.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE91802279E86F900D8A44D /* Twith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twith.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE91805279E86F900D8A44D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEE91807279E86F900D8A44D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		AEE9182C279E8DDA00D8A44D /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		AEE9182F279E90F500D8A44D /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		AEE91831279E994900D8A44D /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		FEF47E1E339556A761156983 /* Pods-Twith.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twith.release.xcconfig"; path = "Target Support Files/Pods-Twith/Pods-Twith.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +51,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE9181B279E876D00D8A44D /* SnapKit in Frameworks */,
+				1D05B3A774492A6D8F760816 /* Pods_Twith.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34AC3FDA872DCD6ED59E29B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E9B0CEEED3CF5894F8E9849 /* Pods-Twith.debug.xcconfig */,
+				FEF47E1E339556A761156983 /* Pods-Twith.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8FC27F64AFEBEADFCDB43681 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				982A5AD2872B1D9B1A31137C /* Pods_Twith.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AEE917F9279E86F900D8A44D = {
 			isa = PBXGroup;
 			children = (
 				AEE91804279E86F900D8A44D /* Twith */,
 				AEE91803279E86F900D8A44D /* Products */,
+				34AC3FDA872DCD6ED59E29B7 /* Pods */,
+				8FC27F64AFEBEADFCDB43681 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEE91816279E86FA00D8A44D /* Build configuration list for PBXNativeTarget "Twith" */;
 			buildPhases = (
+				3716731A73D61F12C6B5BE2C /* [CP] Check Pods Manifest.lock */,
 				AEE917FE279E86F900D8A44D /* Sources */,
 				AEE917FF279E86F900D8A44D /* Frameworks */,
 				AEE91800279E86F900D8A44D /* Resources */,
+				52E0C10221E21A4CEBFA6347 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,7 +205,7 @@
 			);
 			mainGroup = AEE917F9279E86F900D8A44D;
 			packageReferences = (
-				AEE91819279E876D00D8A44D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				AEE91819279E876D00D8A44D /* XCRemoteSwiftPackageReference "SnapKit.git" */,
 			);
 			productRefGroup = AEE91803279E86F900D8A44D /* Products */;
 			projectDirPath = "";
@@ -200,6 +227,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3716731A73D61F12C6B5BE2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Twith-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52E0C10221E21A4CEBFA6347 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Twith/Pods-Twith-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Twith/Pods-Twith-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Twith/Pods-Twith-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AEE917FE279E86F900D8A44D /* Sources */ = {
@@ -352,6 +421,7 @@
 		};
 		AEE91817279E86FA00D8A44D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E9B0CEEED3CF5894F8E9849 /* Pods-Twith.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -379,6 +449,7 @@
 		};
 		AEE91818279E86FA00D8A44D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEF47E1E339556A761156983 /* Pods-Twith.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -428,7 +499,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AEE91819279E876D00D8A44D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		AEE91819279E876D00D8A44D /* XCRemoteSwiftPackageReference "SnapKit.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -441,7 +512,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		AEE9181A279E876D00D8A44D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AEE91819279E876D00D8A44D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = AEE91819279E876D00D8A44D /* XCRemoteSwiftPackageReference "SnapKit.git" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
