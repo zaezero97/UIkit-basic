@@ -12,6 +12,8 @@
 		AEE9180F279E86FA00D8A44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE9180E279E86FA00D8A44D /* Assets.xcassets */; };
 		AEE91812279E86FA00D8A44D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE91810279E86FA00D8A44D /* LaunchScreen.storyboard */; };
 		AEE9181B279E876D00D8A44D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AEE9181A279E876D00D8A44D /* SnapKit */; };
+		AEE9181E279E87C400D8A44D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE9181D279E87C400D8A44D /* User.swift */; };
+		AEE91820279E87C900D8A44D /* Twith.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE9181F279E87C900D8A44D /* Twith.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		AEE9180E279E86FA00D8A44D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEE91811279E86FA00D8A44D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEE91813279E86FA00D8A44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEE9181D279E87C400D8A44D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AEE9181F279E87C900D8A44D /* Twith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twith.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		AEE91804279E86F900D8A44D /* Twith */ = {
 			isa = PBXGroup;
 			children = (
+				AEE9181C279E87BA00D8A44D /* Models */,
 				AEE91805279E86F900D8A44D /* AppDelegate.swift */,
 				AEE91807279E86F900D8A44D /* SceneDelegate.swift */,
 				AEE9180E279E86FA00D8A44D /* Assets.xcassets */,
@@ -61,6 +66,15 @@
 				AEE91813279E86FA00D8A44D /* Info.plist */,
 			);
 			path = Twith;
+			sourceTree = "<group>";
+		};
+		AEE9181C279E87BA00D8A44D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AEE9181D279E87C400D8A44D /* User.swift */,
+				AEE9181F279E87C900D8A44D /* Twith.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +155,8 @@
 			files = (
 				AEE91806279E86F900D8A44D /* AppDelegate.swift in Sources */,
 				AEE91808279E86F900D8A44D /* SceneDelegate.swift in Sources */,
+				AEE91820279E87C900D8A44D /* Twith.swift in Sources */,
+				AEE9181E279E87C400D8A44D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
