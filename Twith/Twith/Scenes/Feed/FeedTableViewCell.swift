@@ -8,28 +8,7 @@
 import UIKit
 import SnapKit
 
-enum Icon {
-    case comment
-    case share
-    case like
-    case write
-    
-    var image: UIImage? {
-        let systemName: String
-        
-        switch self {
-        case .comment:
-            systemName = "message"
-        case .share:
-            systemName = "square.and.arrow.up"
-        case .like:
-            systemName = "heart"
-        case .write:
-            systemName = "square.and.pencil"
-        }
-        return UIImage(systemName: systemName)
-    }
-}
+
 final class FeedTableViewCell: UITableViewCell {
     static let identifier = "FeedTableViewCell"
     
