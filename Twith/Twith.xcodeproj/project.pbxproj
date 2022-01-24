@@ -15,6 +15,10 @@
 		AEE9181E279E87C400D8A44D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE9181D279E87C400D8A44D /* User.swift */; };
 		AEE91820279E87C900D8A44D /* Twith.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE9181F279E87C900D8A44D /* Twith.swift */; };
 		AEE91822279E887200D8A44D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE91821279E887200D8A44D /* UserDefaultsManager.swift */; };
+		AEE91826279E8AE800D8A44D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE91825279E8AE800D8A44D /* TabBarViewController.swift */; };
+		AEE91828279E8B0E00D8A44D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE91827279E8B0E00D8A44D /* FeedViewController.swift */; };
+		AEE9182A279E8B1900D8A44D /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE91829279E8B1900D8A44D /* FeedPresenter.swift */; };
+		AEE9182D279E8DDA00D8A44D /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE9182C279E8DDA00D8A44D /* TabBarItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		AEE9181D279E87C400D8A44D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AEE9181F279E87C900D8A44D /* Twith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twith.swift; sourceTree = "<group>"; };
 		AEE91821279E887200D8A44D /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		AEE91825279E8AE800D8A44D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		AEE91827279E8B0E00D8A44D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		AEE91829279E8B1900D8A44D /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		AEE9182C279E8DDA00D8A44D /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 		AEE91804279E86F900D8A44D /* Twith */ = {
 			isa = PBXGroup;
 			children = (
+				AEE91824279E8ACB00D8A44D /* Scenes */,
 				AEE91823279E887600D8A44D /* Managers */,
 				AEE9181C279E87BA00D8A44D /* Models */,
 				AEE91805279E86F900D8A44D /* AppDelegate.swift */,
@@ -86,6 +95,33 @@
 				AEE91821279E887200D8A44D /* UserDefaultsManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		AEE91824279E8ACB00D8A44D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AEE9182E279E8DEB00D8A44D /* TabBar */,
+				AEE9182B279E8B1D00D8A44D /* Feed */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AEE9182B279E8B1D00D8A44D /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				AEE91827279E8B0E00D8A44D /* FeedViewController.swift */,
+				AEE91829279E8B1900D8A44D /* FeedPresenter.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		AEE9182E279E8DEB00D8A44D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				AEE91825279E8AE800D8A44D /* TabBarViewController.swift */,
+				AEE9182C279E8DDA00D8A44D /* TabBarItem.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +202,13 @@
 			files = (
 				AEE91806279E86F900D8A44D /* AppDelegate.swift in Sources */,
 				AEE91808279E86F900D8A44D /* SceneDelegate.swift in Sources */,
+				AEE9182A279E8B1900D8A44D /* FeedPresenter.swift in Sources */,
+				AEE9182D279E8DDA00D8A44D /* TabBarItem.swift in Sources */,
 				AEE91820279E87C900D8A44D /* Twith.swift in Sources */,
 				AEE9181E279E87C400D8A44D /* User.swift in Sources */,
+				AEE91826279E8AE800D8A44D /* TabBarViewController.swift in Sources */,
 				AEE91822279E887200D8A44D /* UserDefaultsManager.swift in Sources */,
+				AEE91828279E8B0E00D8A44D /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
