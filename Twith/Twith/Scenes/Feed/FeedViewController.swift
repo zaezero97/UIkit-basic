@@ -47,7 +47,10 @@ final class FeedViewController: UIViewController {
 extension FeedViewController: FeedProtocol {
     func setupView() {
         self.navigationItem.title = "Feed"
-        [tableView, writeButton].forEach {
+        [
+            tableView,
+            writeButton
+        ].forEach {
             self.view.addSubview($0)
         }
         

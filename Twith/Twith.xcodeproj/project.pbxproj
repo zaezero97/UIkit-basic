@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1D05B3A774492A6D8F760816 /* Pods_Twith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 982A5AD2872B1D9B1A31137C /* Pods_Twith.framework */; };
+		AE3FAF94279F7B660086AB49 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FAF93279F7B660086AB49 /* ProfileViewController.swift */; };
+		AE3FAF96279F7B700086AB49 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FAF95279F7B700086AB49 /* ProfilePresenter.swift */; };
+		AE3FAF99279F81CC0086AB49 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = AE3FAF98279F81CC0086AB49 /* Toast */; };
 		AE5467DD279ED94E00CE0C9D /* TwithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5467DC279ED94E00CE0C9D /* TwithViewController.swift */; };
 		AE5467DF279ED95600CE0C9D /* TwithPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5467DE279ED95600CE0C9D /* TwithPresenter.swift */; };
 		AE5467E3279EDFCB00CE0C9D /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5467E2279EDFCB00CE0C9D /* WriteViewController.swift */; };
@@ -31,6 +34,8 @@
 /* Begin PBXFileReference section */
 		0E9B0CEEED3CF5894F8E9849 /* Pods-Twith.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twith.debug.xcconfig"; path = "Target Support Files/Pods-Twith/Pods-Twith.debug.xcconfig"; sourceTree = "<group>"; };
 		982A5AD2872B1D9B1A31137C /* Pods_Twith.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twith.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE3FAF93279F7B660086AB49 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AE3FAF95279F7B700086AB49 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		AE5467DC279ED94E00CE0C9D /* TwithViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwithViewController.swift; sourceTree = "<group>"; };
 		AE5467DE279ED95600CE0C9D /* TwithPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwithPresenter.swift; sourceTree = "<group>"; };
 		AE5467E2279EDFCB00CE0C9D /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3FAF99279F81CC0086AB49 /* Toast in Frameworks */,
 				AEE9181B279E876D00D8A44D /* SnapKit in Frameworks */,
 				1D05B3A774492A6D8F760816 /* Pods_Twith.framework in Frameworks */,
 			);
@@ -81,6 +87,15 @@
 				982A5AD2872B1D9B1A31137C /* Pods_Twith.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE3FAF92279F7B5C0086AB49 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AE3FAF93279F7B660086AB49 /* ProfileViewController.swift */,
+				AE3FAF95279F7B700086AB49 /* ProfilePresenter.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		AE5467E0279ED95A00CE0C9D /* Twith */ = {
@@ -154,6 +169,7 @@
 		AEE91824279E8ACB00D8A44D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AE3FAF92279F7B5C0086AB49 /* Profile */,
 				AEE91831279E994900D8A44D /* Icon.swift */,
 				AE5467E1279EDFC400CE0C9D /* Write */,
 				AEE9182E279E8DEB00D8A44D /* TabBar */,
@@ -202,6 +218,7 @@
 			name = Twith;
 			packageProductDependencies = (
 				AEE9181A279E876D00D8A44D /* SnapKit */,
+				AE3FAF98279F81CC0086AB49 /* Toast */,
 			);
 			productName = Twith;
 			productReference = AEE91802279E86F900D8A44D /* Twith.app */;
@@ -233,6 +250,7 @@
 			mainGroup = AEE917F9279E86F900D8A44D;
 			packageReferences = (
 				AEE91819279E876D00D8A44D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				AE3FAF97279F81CC0086AB49 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = AEE91803279E86F900D8A44D /* Products */;
 			projectDirPath = "";
@@ -307,7 +325,9 @@
 				AEE91808279E86F900D8A44D /* SceneDelegate.swift in Sources */,
 				AEE9182A279E8B1900D8A44D /* FeedPresenter.swift in Sources */,
 				AEE9182D279E8DDA00D8A44D /* TabBarItem.swift in Sources */,
+				AE3FAF96279F7B700086AB49 /* ProfilePresenter.swift in Sources */,
 				AEE91820279E87C900D8A44D /* Twith.swift in Sources */,
+				AE3FAF94279F7B660086AB49 /* ProfileViewController.swift in Sources */,
 				AE5467E3279EDFCB00CE0C9D /* WriteViewController.swift in Sources */,
 				AE5467E5279EDFD100CE0C9D /* WritePresenter.swift in Sources */,
 				AEE9181E279E87C400D8A44D /* User.swift in Sources */,
@@ -530,6 +550,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AE3FAF97279F81CC0086AB49 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		AEE91819279E876D00D8A44D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -541,6 +569,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AE3FAF98279F81CC0086AB49 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE3FAF97279F81CC0086AB49 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
 		AEE9181A279E876D00D8A44D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AEE91819279E876D00D8A44D /* XCRemoteSwiftPackageReference "SnapKit" */;

@@ -82,7 +82,7 @@ final class TwithViewController: UIViewController {
     init(twith: Twith) {
         super.init(nibName: nil, bundle: nil)
         self.presenter = TwithPresenter(vc: self, twith: twith)
-        view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .systemBackground
     }
     
     required init?(coder: NSCoder) {

@@ -73,7 +73,11 @@ final class FeedTableViewCell: UITableViewCell {
 private extension FeedTableViewCell {
     func setupLayout() {
         let buttonStackView = UIStackView(
-            arrangedSubviews: [likeButton, commentButton, shareButton]
+            arrangedSubviews: [
+                likeButton,
+                commentButton,
+                shareButton
+            ]
         )
         buttonStackView.axis = .horizontal
         buttonStackView.distribution = .fillEqually
