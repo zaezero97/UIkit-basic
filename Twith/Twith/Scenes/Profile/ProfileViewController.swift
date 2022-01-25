@@ -34,9 +34,15 @@ final class ProfileViewController: UIViewController {
         button.backgroundColor = .systemBlue
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(didTapSaveButton), for: .touchUpInside)
-        var config = UIButton.Configuration.filled()
-        config.titlePadding = 8.0
-        button.configuration = config
+        if #available(iOS 15.0, *) {
+            var config = UIButton.Configuration.filled()
+            config.titlePadding = 8.0
+            button.configuration = config
+        } else {
+            button.contentEdgeInsets = UIEdgeInsets(top: 8.0, left: 8.0, bottom: 8.0, right: 8.0)
+            // Fallback on earlier versions
+        }
+     
         return button
     }()
     override func viewDidLoad() {

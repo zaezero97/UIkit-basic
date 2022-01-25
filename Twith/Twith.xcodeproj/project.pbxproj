@@ -11,6 +11,15 @@
 		AE3FAF94279F7B660086AB49 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FAF93279F7B660086AB49 /* ProfileViewController.swift */; };
 		AE3FAF96279F7B700086AB49 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FAF95279F7B700086AB49 /* ProfilePresenter.swift */; };
 		AE3FAF99279F81CC0086AB49 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = AE3FAF98279F81CC0086AB49 /* Toast */; };
+		AE3FAFA8279F87BE0086AB49 /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FAFA7279F87BE0086AB49 /* FeedPresenterTests.swift */; };
+		AE3FAFAB279F8A600086AB49 /* MockFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FAFAA279F8A600086AB49 /* MockFeedViewController.swift */; };
+		AE3FAFAD279F8A830086AB49 /* MockUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FAFAC279F8A830086AB49 /* MockUserDefaultsManager.swift */; };
+		AE3FAFB0279F8AAD0086AB49 /* WriitePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FAFAF279F8AAD0086AB49 /* WriitePresenterTests.swift */; };
+		AE3FAFB2279F8BF30086AB49 /* MockWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FAFB1279F8BF30086AB49 /* MockWriteViewController.swift */; };
+		AE3FAFB4279F8C1F0086AB49 /* TwithPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FAFB3279F8C1F0086AB49 /* TwithPresenterTests.swift */; };
+		AE3FAFB6279F8D2F0086AB49 /* MockTwithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FAFB5279F8D2F0086AB49 /* MockTwithViewController.swift */; };
+		AE3FAFB8279F8D490086AB49 /* ProfilePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FAFB7279F8D490086AB49 /* ProfilePresenterTests.swift */; };
+		AE3FAFBA279F90F50086AB49 /* MockProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FAFB9279F90F50086AB49 /* MockProfileViewController.swift */; };
 		AE5467DD279ED94E00CE0C9D /* TwithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5467DC279ED94E00CE0C9D /* TwithViewController.swift */; };
 		AE5467DF279ED95600CE0C9D /* TwithPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5467DE279ED95600CE0C9D /* TwithPresenter.swift */; };
 		AE5467E3279EDFCB00CE0C9D /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5467E2279EDFCB00CE0C9D /* WriteViewController.swift */; };
@@ -31,11 +40,31 @@
 		AEE91832279E994900D8A44D /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE91831279E994900D8A44D /* Icon.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AE3FAFA2279F87A90086AB49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEE917FA279E86F900D8A44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEE91801279E86F900D8A44D;
+			remoteInfo = Twith;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0E9B0CEEED3CF5894F8E9849 /* Pods-Twith.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twith.debug.xcconfig"; path = "Target Support Files/Pods-Twith/Pods-Twith.debug.xcconfig"; sourceTree = "<group>"; };
 		982A5AD2872B1D9B1A31137C /* Pods_Twith.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twith.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3FAF93279F7B660086AB49 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AE3FAF95279F7B700086AB49 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		AE3FAF9E279F87A90086AB49 /* TwithTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwithTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE3FAFA7279F87BE0086AB49 /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
+		AE3FAFAA279F8A600086AB49 /* MockFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFeedViewController.swift; sourceTree = "<group>"; };
+		AE3FAFAC279F8A830086AB49 /* MockUserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsManager.swift; sourceTree = "<group>"; };
+		AE3FAFAF279F8AAD0086AB49 /* WriitePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriitePresenterTests.swift; sourceTree = "<group>"; };
+		AE3FAFB1279F8BF30086AB49 /* MockWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWriteViewController.swift; sourceTree = "<group>"; };
+		AE3FAFB3279F8C1F0086AB49 /* TwithPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwithPresenterTests.swift; sourceTree = "<group>"; };
+		AE3FAFB5279F8D2F0086AB49 /* MockTwithViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTwithViewController.swift; sourceTree = "<group>"; };
+		AE3FAFB7279F8D490086AB49 /* ProfilePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenterTests.swift; sourceTree = "<group>"; };
+		AE3FAFB9279F90F50086AB49 /* MockProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProfileViewController.swift; sourceTree = "<group>"; };
 		AE5467DC279ED94E00CE0C9D /* TwithViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwithViewController.swift; sourceTree = "<group>"; };
 		AE5467DE279ED95600CE0C9D /* TwithPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwithPresenter.swift; sourceTree = "<group>"; };
 		AE5467E2279EDFCB00CE0C9D /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +88,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AE3FAF9B279F87A90086AB49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEE917FF279E86F900D8A44D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,6 +134,38 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		AE3FAF9F279F87A90086AB49 /* TwithTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE3FAFAE279F8A9A0086AB49 /* Mocks */,
+				AE3FAFA9279F8A520086AB49 /* Tests */,
+			);
+			path = TwithTests;
+			sourceTree = "<group>";
+		};
+		AE3FAFA9279F8A520086AB49 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AE3FAFA7279F87BE0086AB49 /* FeedPresenterTests.swift */,
+				AE3FAFAF279F8AAD0086AB49 /* WriitePresenterTests.swift */,
+				AE3FAFB3279F8C1F0086AB49 /* TwithPresenterTests.swift */,
+				AE3FAFB7279F8D490086AB49 /* ProfilePresenterTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		AE3FAFAE279F8A9A0086AB49 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AE3FAFAA279F8A600086AB49 /* MockFeedViewController.swift */,
+				AE3FAFAC279F8A830086AB49 /* MockUserDefaultsManager.swift */,
+				AE3FAFB1279F8BF30086AB49 /* MockWriteViewController.swift */,
+				AE3FAFB5279F8D2F0086AB49 /* MockTwithViewController.swift */,
+				AE3FAFB9279F90F50086AB49 /* MockProfileViewController.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		AE5467E0279ED95A00CE0C9D /* Twith */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				AEE91804279E86F900D8A44D /* Twith */,
+				AE3FAF9F279F87A90086AB49 /* TwithTests */,
 				AEE91803279E86F900D8A44D /* Products */,
 				34AC3FDA872DCD6ED59E29B7 /* Pods */,
 				8FC27F64AFEBEADFCDB43681 /* Frameworks */,
@@ -130,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				AEE91802279E86F900D8A44D /* Twith.app */,
+				AE3FAF9E279F87A90086AB49 /* TwithTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,6 +271,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AE3FAF9D279F87A90086AB49 /* TwithTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE3FAFA4279F87A90086AB49 /* Build configuration list for PBXNativeTarget "TwithTests" */;
+			buildPhases = (
+				AE3FAF9A279F87A90086AB49 /* Sources */,
+				AE3FAF9B279F87A90086AB49 /* Frameworks */,
+				AE3FAF9C279F87A90086AB49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE3FAFA3279F87A90086AB49 /* PBXTargetDependency */,
+			);
+			name = TwithTests;
+			productName = TwithTests;
+			productReference = AE3FAF9E279F87A90086AB49 /* TwithTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AEE91801279E86F900D8A44D /* Twith */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEE91816279E86FA00D8A44D /* Build configuration list for PBXNativeTarget "Twith" */;
@@ -234,6 +322,11 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					AE3FAF9D279F87A90086AB49 = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
+						TestTargetID = AEE91801279E86F900D8A44D;
+					};
 					AEE91801279E86F900D8A44D = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -257,11 +350,19 @@
 			projectRoot = "";
 			targets = (
 				AEE91801279E86F900D8A44D /* Twith */,
+				AE3FAF9D279F87A90086AB49 /* TwithTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AE3FAF9C279F87A90086AB49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEE91800279E86F900D8A44D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,6 +417,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AE3FAF9A279F87A90086AB49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE3FAFB0279F8AAD0086AB49 /* WriitePresenterTests.swift in Sources */,
+				AE3FAFAB279F8A600086AB49 /* MockFeedViewController.swift in Sources */,
+				AE3FAFB8279F8D490086AB49 /* ProfilePresenterTests.swift in Sources */,
+				AE3FAFB6279F8D2F0086AB49 /* MockTwithViewController.swift in Sources */,
+				AE3FAFA8279F87BE0086AB49 /* FeedPresenterTests.swift in Sources */,
+				AE3FAFBA279F90F50086AB49 /* MockProfileViewController.swift in Sources */,
+				AE3FAFB2279F8BF30086AB49 /* MockWriteViewController.swift in Sources */,
+				AE3FAFAD279F8A830086AB49 /* MockUserDefaultsManager.swift in Sources */,
+				AE3FAFB4279F8C1F0086AB49 /* TwithPresenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEE917FE279E86F900D8A44D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,6 +459,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AE3FAFA3279F87A90086AB49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEE91801279E86F900D8A44D /* Twith */;
+			targetProxy = AE3FAFA2279F87A90086AB49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		AEE91810279E86FA00D8A44D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -354,6 +479,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AE3FAFA5279F87A90086AB49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HWBJNMY98D;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.test.TwithTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twith.app/Twith";
+			};
+			name = Debug;
+		};
+		AE3FAFA6279F87A90086AB49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HWBJNMY98D;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.test.TwithTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twith.app/Twith";
+			};
+			name = Release;
+		};
 		AEE91814279E86FA00D8A44D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -485,6 +659,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,6 +688,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,6 +705,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AE3FAFA4279F87A90086AB49 /* Build configuration list for PBXNativeTarget "TwithTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE3FAFA5279F87A90086AB49 /* Debug */,
+				AE3FAFA6279F87A90086AB49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AEE917FD279E86F900D8A44D /* Build configuration list for PBXProject "Twith" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
