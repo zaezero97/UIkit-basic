@@ -33,24 +33,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
-    func application(
-      _ app: UIApplication,
-      open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]
-    ) -> Bool {
-
-               print(url)
-      var handled: Bool
-
-      handled = GIDSignIn.sharedInstance.handle(url)
-      if handled {
-        return true
-      }
-
-      // Handle other custom URL types.
-
-      // If not handled by this app, return false.
-      return false
-    }
+//    func application(
+//      _ app: UIApplication,
+//      open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+//    ) -> Bool {
+//
+//               print(url)
+//      var handled: Bool
+//
+//      handled = GIDSignIn.sharedInstance.handle(url)
+//      if handled {
+//        return true
+//      }
+//
+//      // Handle other custom URL types.
+//
+//      // If not handled by this app, return false.
+//      return false
+//    }
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -85,27 +85,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         
         let userInfo = response.notification.request.content.userInfo
               print(userInfo)
-              print(userInfo["url"] as? String)
-              guard let deepLinkUrl = userInfo["url"] as? String,
-                  let url = URL(string: deepLinkUrl) else { return }
-
-              // 해당 host를 가지고 있는지 확인
-              guard url.host == "navigation" else { return }
-
-              // 원하는 query parameter가 있는지 확인
-              let urlString = url.absoluteString
-              guard urlString.contains("ㅇname") else { return }
-
-              // URL을 URLComponent로 만들어서 parameter값 가져오기 쉽게 접근
-              let components = URLComponents(string: urlString)
-
-              // URLQueryItem 형식은 [name: value] 쌍으로 되어있으서 Dctionary로 변형
-              let urlQueryItems = components?.queryItems ?? []
-              var dictionaryData = [String: String]()
-              urlQueryItems.forEach { dictionaryData[$0.name] = $0.value }
-              guard let name = dictionaryData["name"] else { return }
-
-              print("네임 = \(name)")
+           
 
         
     }

@@ -12,7 +12,6 @@ import RxCocoa
 class LocationInformationViewModel {
     
     let disposeBag = DisposeBag()
-    
     //subViewModels
     let detailListBackgroundViewModel = DetailListBackgroundViewModel()
     
